@@ -1,0 +1,8 @@
+System M(P,C)::= M1(P,C)
+
+where
+
+Process M1(P,C)::= P->C->C->M1(P,C) EndProc
+
+
+EndSystem
