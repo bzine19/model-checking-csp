@@ -1,0 +1,4 @@
+System test(a,b,c,d)::= P1(a,b)>>P1(c,d)
+where
+ Process P1(a,b)::=a->b->SKIP EndProc
+EndSystem
