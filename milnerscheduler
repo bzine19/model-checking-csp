@@ -1,0 +1,4 @@
+System test(a1,a2,b1,b2)::= (P(a1,a2)|[a1]|P(a1,b1))|[a2]|P(a2,b2)
+where
+  Process P(a,b)::=a->b->P(a,b) EndProc
+EndSystem
