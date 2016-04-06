@@ -1,0 +1,6 @@
+System Test(P,C)::= M2(P,C)
+
+where
+Process M2(P,C)::= (P->((C->SKIP) [] (D->SKIP))); M2(P,C) EndProc
+
+EndSystem
