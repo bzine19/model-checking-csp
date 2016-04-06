@@ -1,0 +1,4 @@
+System Test(a,b)::= ((a->STOP)|||(b->STOP)) |||((c->STOP)|||(d-> STOP))
+
+
+EndSystem
