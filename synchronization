@@ -1,0 +1,4 @@
+System Test(a,b)::= (a->c->d->STOP)|[c]|(b->c->e->STOP)
+
+
+EndSystem
