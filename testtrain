@@ -1,0 +1,8 @@
+System test(car_run,car_approach,car_enter,car_leave,train_run,train_approach,train_enter,train_leave,gate_raise,gate_lower,crash,crash2)::= vehicule(crash,car_run,car_approach,car_enter,car_leave,train_run,train_approach,train_enter,train_leave) ||| gate(gate_raise, gate_lower)
+where
+ Process gate(a,b)::=b->a->gate(a,b) EndProc
+ Process vehicule(crash,car_run,car_approach,car_enter,car_leave,train_run,train_approach,train_enter,train_leave)::=car(crash,car_run,car_approach,car_enter,car_leave) |[crash]| train(crash,train_run,train_approach,train_enter,train_leave) EndProc
+ Process car(crash,car_run,car_approach,car_enter,car_leave)::= (car_run->car_approach->car_enter->car_leave->car(crash,car_run,car_approach,car_enter,car_leave))[](crash->STOP)EndProc
+ Process train(crash,train_run,train_approach,train_enter,train_leave)::= (train_run->train_approach->train_enter->train_leave->train(crash,train_run,train_approach,train_enter,train_leave))[](crash->STOP)EndProc
+
+EndSystem
